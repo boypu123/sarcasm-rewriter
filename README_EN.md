@@ -85,12 +85,6 @@ It is not a thin prompt wrapper — it is a full agent:
 ## ✨ Preview
 
 ```text
-👤 今天天气真好。
-
-🤖 今天天气真好，适合在户外晒成非洲人。
-```
-
-```text
 👤 The report was submitted three weeks late.
 
 🤖 "Three weeks late? Oh, I see, you must have had a busy schedule.

@@ -84,12 +84,6 @@ SarcasmMaster 接收**一句话**或**一个场景**，输出**一句**阴阳怪
 ## ✨ 效果预览
 
 ```text
-👤 今天天气真好。
-
-🤖 今天天气真好，适合在户外晒成非洲人。
-```
-
-```text
 👤 The report was submitted three weeks late.
 
 🤖 "Three weeks late? Oh, I see, you must have had a busy schedule.
