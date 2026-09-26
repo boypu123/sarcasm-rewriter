@@ -104,7 +104,7 @@ It is not a thin prompt wrapper — it is a full agent:
 [tool]        retrieve_sarcasm_patterns  ← question: "今天天气真好。"
 [tool_result] 针对主题：特朗普宣布已联合英法军事打击叙利亚… (3 exemplars recalled)
 [tool]        transform_to_sarcasm       ← original: "今天天气真好。"
-[final]       今天天气真好，适合在户外晒成非洲人。   (10.3s)
+[final]       是啊，这种天气连乌云都嫉妒得想躲起来，真是难得的晴天。   (10.3s)
 ```
 
 ---

@@ -103,7 +103,7 @@ SarcasmMaster 接收**一句话**或**一个场景**，输出**一句**阴阳怪
 [tool]        retrieve_sarcasm_patterns  ← question: "今天天气真好。"
 [tool_result] 针对主题：特朗普宣布已联合英法军事打击叙利亚…（召回 3 条范例）
 [tool]        transform_to_sarcasm       ← original: "今天天气真好。"
-[final]       今天天气真好，适合在户外晒成非洲人。   （耗时 10.3s）
+[final]       是啊，这种天气连乌云都嫉妒得想躲起来，真是难得的晴天。   （耗时 10.3s）
 ```
 
 ---
