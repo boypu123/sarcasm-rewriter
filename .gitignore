@@ -1,0 +1,36 @@
+# ---------------- Python ----------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ---------------- 虚拟环境 ----------------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------------- 环境变量 ----------------
+# .env 是本机配置，不要提交；请提交 .env.example
+.env
+.env.local
+
+# ---------------- 向量库 ----------------
+# 首次运行 `python rag.py` 会自动生成，体积大且可重建，不需要提交
+chroma_db/
+
+# ---------------- 编辑器 / 系统 ----------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------- 杂项 ----------------
+*.log
+.pytest_cache/
+.ipynb_checkpoints/

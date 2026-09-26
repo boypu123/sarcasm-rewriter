@@ -1,0 +1,25 @@
+# SarcasmMaster 依赖
+# 安装： python -m pip install -r requirements.txt
+#
+# 另外还需要两个「外部」依赖，不是 pip 包：
+#   1. Ollama 已安装并在后台运行（默认 http://127.0.0.1:11434）
+#   2. 已拉取模型：  ollama pull qwen3:8b  &&  ollama pull nomic-embed-text
+
+# --- Web 层（本次新增） ---
+Flask>=3.1
+flask-cors>=6.0
+
+# --- LangChain / Agent ---
+langchain>=1.4
+langchain-core>=1.6
+langchain-ollama>=1.1
+
+# --- RAG ---
+langchain-community>=0.4
+langchain-text-splitters>=1.1
+langchain-chroma>=1.1
+chromadb>=1.5
+
+# --- 其它 ---
+python-dotenv>=1.0
+pydantic>=2.13

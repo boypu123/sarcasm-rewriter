@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SarcasmMaster · 阴阳怪气生成器</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>😏</text></svg>" />
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- 背景装饰 -->
+<div class="orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <div class="grain"></div>
+</div>
+
+<main class="shell">
+
+  <header class="hero">
+    <div class="badge">
+      <span class="dot"></span>
+      RAG &nbsp;·&nbsp; Tool Calling &nbsp;·&nbsp; LangChain
+    </div>
+    <h1>Sarcasm<em>Master</em></h1>
+    <p class="sub">
+      把一句话，变得阴阳怪气。
+      <span class="sub-en">Subtle, deniable, painfully polite.</span>
+    </p>
+  </header>
+
+  <!-- 输入区 -->
+  <section class="panel" id="inputPanel">
+    <div class="panel-head">
+      <label for="input">原句 / 场景</label>
+      <span class="counter"><span id="charCount">0</span> 字</span>
+    </div>
+
+    <textarea id="input" rows="3" spellcheck="false"
+      placeholder="例如：今天天气真好。&#10;或者描述一个场景：同事又一次把会议纪要漏掉了我负责的部分。"></textarea>
+
+    <div class="examples" id="examples">
+      <span class="examples-label">试试：</span>
+      <button type="button" class="chip" data-text="今天天气真好。">今天天气真好。</button>
+      <button type="button" class="chip" data-text="The report was submitted three weeks late.">The report was submitted three weeks late.</button>
+      <button type="button" class="chip" data-text="朋友说他复习了一整晚，然后考了 42 分。">复习一整晚考了 42 分</button>
+    </div>
+
+    <div class="actions">
+      <button id="go" class="btn-primary">
+        <span class="btn-label">开始阴阳怪气</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+      <button id="clear" class="btn-ghost" type="button">清空</button>
+      <kbd class="hint">Ctrl</kbd><kbd class="hint">↵</kbd>
+    </div>
+  </section>
+
+  <!-- 结果区 -->
+  <section class="panel result" id="resultPanel" hidden>
+    <div class="panel-head">
+      <label>阴阳怪气版</label>
+      <button id="copy" class="btn-ghost btn-small" type="button">复制</button>
+    </div>
+    <blockquote id="output" class="output"></blockquote>
+    <p class="cursor-hint" id="cursorHint" hidden>正在遣词造句…</p>
+  </section>
+
+  <!-- Agent 轨迹 -->
+  <section class="panel trace" id="tracePanel" hidden>
+    <details id="traceDetails" open>
+      <summary>
+        <span class="trace-title">Agent 思考轨迹</span>
+        <span class="trace-count" id="traceCount">0 步</span>
+      </summary>
+      <ol class="trace-list" id="traceList"></ol>
+    </details>
+  </section>
+
+  <!-- 错误 -->
+  <section class="panel error" id="errorPanel" hidden>
+    <strong>出错了</strong>
+    <p id="errorText"></p>
+  </section>
+
+  <footer class="foot">
+    <span id="health">正在连接后端…</span>
+  </footer>
+
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
